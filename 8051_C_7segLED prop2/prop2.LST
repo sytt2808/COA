@@ -1,0 +1,42 @@
+C51 COMPILER V9.52.0.0   PROP2                                                             11/11/2023 15:35:06 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE PROP2
+OBJECT MODULE PLACED IN prop2.OBJ
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE prop2.c BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include<at89x51.h>
+   2          int dem=0;
+   3          void delay(unsigned long time)
+   4          {
+   5   1      unsigned long i;
+   6   1      for(i=0;i<time;i++)
+   7   1      {
+   8   2      }
+   9   1      }
+  10          void main(void)
+  11          {
+  12   1      P2=0x00;
+  13   1      while(dem<10)
+  14   1      {
+  15   2      P2=dem;
+  16   2      dem++;
+  17   2      delay(10000);
+  18   2      }
+  19   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    104    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      2       8
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

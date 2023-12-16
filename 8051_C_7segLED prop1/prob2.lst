@@ -1,0 +1,45 @@
+C51 COMPILER V9.52.0.0   PROB2                                                             11/11/2023 14:42:47 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE PROB2
+OBJECT MODULE PLACED IN prob2.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE prob2\prob2.c BROWSE DEBUG OBJECTEXTEND PRINT(.\prob2.lst) TABS(2) OBJEC
+                    -T(prob2.obj)
+
+line level    source
+
+   1          #include <at89x51.h>
+   2          
+   3          int dem = 0;
+   4          
+   5          void delay(unsigned long time) {
+   6   1          unsigned long i, j;
+   7   1          for (i = 0; i < time; i++) {
+   8   2              for (j = 0; j < 125; j++) {
+   9   3                  // Adjust the inner loop based on your actual clock frequency
+  10   3              }
+  11   2          }
+  12   1      }
+  13          
+  14          void main(void) {
+  15   1          P2 = 0x00;
+  16   1          while (dem < 10) {
+  17   2              P2 = dem;
+  18   2              dem++;
+  19   2              delay(10000);
+  20   2          }
+  21   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    156    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      2      12
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
