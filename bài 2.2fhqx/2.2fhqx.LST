@@ -1,0 +1,66 @@
+C51 COMPILER V9.52.0.0   2_2FHQX                                                           11/18/2023 16:35:11 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE 2_2FHQX
+OBJECT MODULE PLACED IN 2.2fhqx.OBJ
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE 2.2fhqx.c BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include < at89x51.h> 
+   2          //delay 4ms
+   3          void delay(){  
+   4   1        int i; 
+   5   1        for(i=1;i<480;i++); 
+   6   1      }
+   7          
+   8          unsigned char num[10] = {0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90 }; 
+   9          
+  10          void main(){ 
+  11   1      int a[4];
+  12   1      int dem, x, temp, counter;
+  13   1      while(1){
+  14   2      dem = 0;
+  15   2            temp = counter;
+  16   2            if (counter == 20000)
+  17   2                counter = 10000;
+  18   2            else counter++;
+  19   2            do{
+  20   3              a[dem] = temp%10;
+  21   3              temp = temp/10;
+  22   3              dem++;
+  23   3            }while(temp!=0);
+  24   2            for(x=63;x>0;x--){        
+  25   3            P1 = 0xFF;
+  26   3            P2 = a[0] ; 
+  27   3            P1 = 0xFE; //1111 1110 led 1 on
+  28   3            delay(); 
+  29   3            P1 = 0xFF;   //1111 1111 4 led off
+  30   3            P2 = a[1]; 
+  31   3            P1 = 0xFD; //1111 1101 led 2 on
+  32   3            delay(); 
+  33   3            P1 = 0xFF;  //1111 1111 4 led off
+  34   3            P2 = a[2];
+  35   3            P1 = 0xfb;//1111 1011 led 3 on
+  36   3            delay(); 
+  37   3            P1 = 0xff;  //1111 1111
+  38   3            P2 = a[3]; 
+  39   3            P1 = 0xf7; //1111 0111
+  40   3            delay(); 
+  41   3            }
+  42   2        } 
+  43   1        }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    166    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     10      12
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
