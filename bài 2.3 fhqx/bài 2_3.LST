@@ -1,0 +1,119 @@
+C51 COMPILER V9.52.0.0   B_I_2_3                                                           11/18/2023 23:40:30 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE B_I_2_3
+OBJECT MODULE PLACED IN bài 2_3.OBJ
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE bài 2_3.c BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include<at89x51.h>
+   2          #define DELAYTIME 120
+   3          #define LOOPVALUE 2
+   4          #define LOOPTIME 63 //(1000/((DELAYTIME/120)*16))
+   5          void delay(){  
+   6   1        int i; 
+   7   1        for(i=1;i<DELAYTIME;i++); 
+   8   1      }
+   9          void main(){
+  10   1        int x, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16;
+  11   1        while(1)
+  12   1          for(a1=0;a1<LOOPVALUE;a1++)
+  13   1          for(a2=0;a2<LOOPVALUE;a2++)
+  14   1          for(a3=0;a3<LOOPVALUE;a3++)
+  15   1          for(a4=0;a4<LOOPVALUE;a4++) 
+  16   1          for(a5=0;a5<LOOPVALUE;a5++)             
+  17   1          for(a6=0;a6<LOOPVALUE;a6++)                 
+  18   1          for(a7=0;a7<LOOPVALUE;a7++)                   
+  19   1          for(a8=0;a8<LOOPVALUE;a8++)                         
+  20   1          for(a9=0;a9<LOOPVALUE;a9++)                                 
+  21   1          for(a10=0;a10<LOOPVALUE;a10++)                                  
+  22   1          for(a11=0;a11<LOOPVALUE;a11++)      
+  23   1          for(a12=0;a12<LOOPVALUE;a12++)  
+  24   1          for(a13=0;a13<LOOPVALUE;a13++)  
+  25   1          for(a14=0;a14<LOOPVALUE;a14++)  
+  26   1          for(a15=0;a15<LOOPVALUE;a15++)  
+  27   1          for(a16=0;a16<LOOPVALUE;a16++)
+  28   1            for(x=0;x<LOOPTIME;x++){
+  29   2              P2 = 0xFF;
+  30   2              P3 = 0;
+  31   2              P2 = a16;
+  32   2              delay();
+  33   2              P2 = 0xFF;
+  34   2              P3 = 1;
+  35   2              P2 = a15;
+  36   2              delay();
+  37   2              P2 = 0xFF;
+  38   2              P3 = 2;
+  39   2              P2 = a14;
+  40   2              delay();
+  41   2              P2 = 0xFF;
+  42   2              P3 = 3;
+  43   2              P2 = a13;
+  44   2              delay();
+  45   2              P2 = 0xFF;
+  46   2              P3 = 4;
+  47   2              P2 = a12;
+  48   2              delay();
+  49   2              P2 = 0xFF;
+  50   2              P3 = 5;
+  51   2              P2 = a11;
+  52   2              delay();
+  53   2              P2 = 0xFF;
+  54   2              P3 = 6;
+  55   2              P2 = a10;
+C51 COMPILER V9.52.0.0   B_I_2_3                                                           11/18/2023 23:40:30 PAGE 2   
+
+  56   2              delay();
+  57   2              P2 = 0xFF;
+  58   2              P3 = 7;
+  59   2              P2 = a9;
+  60   2              delay();
+  61   2              P2 = 0xFF;
+  62   2              P3 = 8;
+  63   2              P2 = a8;
+  64   2              delay();
+  65   2              P2 = 0xFF;
+  66   2              P3 = 9;
+  67   2              P2 = a7;
+  68   2              delay();
+  69   2              P2 = 0xFF;
+  70   2              P3 = 10;
+  71   2              P2 = a6;
+  72   2              delay();
+  73   2              P2 = 0xFF;
+  74   2              P3 = 11;
+  75   2              P2 = a5;
+  76   2              delay();
+  77   2              P2 = 0xFF;
+  78   2              P3 = 12;
+  79   2              P2 = a4;
+  80   2              delay();
+  81   2              P2 = 0xFF;
+  82   2              P3 = 13;
+  83   2              P2 = a3;
+  84   2              delay();
+  85   2              P2 = 0xFF;
+  86   2              P3 = 14;
+  87   2              P2 = a2;
+  88   2              delay();
+  89   2              P2 = 0xFF;
+  90   2              P3 = 15;
+  91   2              P2 = a1;
+  92   2              delay();
+  93   2            }
+  94   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    636    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      28
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
